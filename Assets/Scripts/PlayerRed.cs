@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerRed : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerRed : MonoBehaviour
     public float speed = 5.0f;
     private Rigidbody2D rb;
     private Animator animator;
+    private bool colision;
 
     public GameObject lineaBlanca;
 
@@ -27,36 +29,38 @@ public class PlayerRed : MonoBehaviour
 
         // Asignamos la posición inicial al personaje
         transform.position = new Vector2(x, y);
+
+        colision = false;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        /*// Obtenemos la posición de la línea blanca en el eje y
-        float yLimit = lineaBlanca.transform.position.y;
+        if (!colision)
+        {
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        // Restringimos el movimiento del personaje en el eje y para que no se salga de la línea blanca
-        Vector2 newPosition = transform.position;
-        newPosition.y = Mathf.Clamp(newPosition.y, yLimit - 0.5f, yLimit + 0.5f);
-        transform.position = newPosition;
-
-        // Mover al personaje*/
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
-
-        animator.SetTrigger("PlayerRedRun");
+            animator.SetTrigger("PlayerRedRun");
+        }
+        else
+        {
+            animator.ResetTrigger("PlayerRedRun");
+        }
+        
 
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Juego1"))
         {
-            animator.ResetTrigger("PlayerRedRun");
+            colision = true;
             animator.SetTrigger("PlayerRedJump");
+            yield return new WaitForSeconds(1);
             Time.timeScale = 0f;
-            StopAllCoroutines();
+            SceneManager.LoadScene("FirstSceneJuego1");
         }
     }
 
