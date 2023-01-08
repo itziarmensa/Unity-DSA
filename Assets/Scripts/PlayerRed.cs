@@ -12,23 +12,43 @@ public class PlayerRed : MonoBehaviour
     private bool colision;
 
     public GameObject lineaBlanca;
+    public GameObject nivelJuego1;
+
+    public GameManagerJuego1 gameManagerJuego1;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
 
-        Camera camera = Camera.main;
 
-        float cameraHalfWidth = camera.orthographicSize * camera.aspect;
-        float cameraHalfHeight = camera.orthographicSize;
+        Debug.Log("Win = " + gameManagerJuego1.win);
+        Debug.Log("Game1 = " + gameManagerJuego1.game1);
 
-        float x = camera.transform.position.x - cameraHalfWidth;
-        float y = camera.transform.position.y;
-        //float positionY = y + 0.8f;
+        if (!gameManagerJuego1.game1)
+        {
+            Camera camera = Camera.main;
 
-        // Asignamos la posición inicial al personaje
-        transform.position = new Vector2(x, y);
+            float cameraHalfWidth = camera.orthographicSize * camera.aspect;
+            float cameraHalfHeight = camera.orthographicSize;
+
+            float x = camera.transform.position.x - cameraHalfWidth;
+            float y = camera.transform.position.y;
+            //float positionY = y + 0.8f;
+
+            // Asignamos la posición inicial al personaje
+            transform.position = new Vector2(x, y);
+        }
+
+        if (gameManagerJuego1.game1)
+        {
+            Vector3 position1 = nivelJuego1.transform.position;
+            float x1 = position1.x;
+            float y1 = position1.y;
+            transform.position = new Vector2(x1, y1);
+        }
+
+        
 
         colision = false;
     }
@@ -59,8 +79,11 @@ public class PlayerRed : MonoBehaviour
             colision = true;
             animator.SetTrigger("PlayerRedJump");
             yield return new WaitForSeconds(1);
-            Time.timeScale = 0f;
-            SceneManager.LoadScene("FirstSceneJuego1");
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("FirstSceneJuego1");
+            while (!asyncLoad.isDone)
+            {
+                yield return null;
+            }
         }
     }
 

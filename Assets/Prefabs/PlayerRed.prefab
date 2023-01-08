@@ -169,3 +169,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   lineaBlanca: {fileID: 6623971814613565462, guid: ee82431accb16da48b533d5357a0ed63, type: 3}
+  bolaJuego1: {fileID: 588129675654036486, guid: f185751843e378240b87195e92ca96d0, type: 3}

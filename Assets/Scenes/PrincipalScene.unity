@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1938472434752749956, guid: ef589ae4ea39d194287d9f2e8318b563, type: 3}
+      propertyPath: gameManagerJuego1
+      value: 
+      objectReference: {fileID: 3336327374551875429, guid: 57cbbf1299c83b74cb70530f905bffbe, type: 3}
     - target: {fileID: 2262567928287798689, guid: ef589ae4ea39d194287d9f2e8318b563, type: 3}
       propertyPath: m_Name
       value: PlayerRed

@@ -40,8 +40,14 @@ public class PlayerRedJuego1 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("BolaFuego"))
         {
-            animator.SetTrigger("PlayerRedHurt");
+            
             collisionCount++;
+
+            if(collisionCount < deathCollisionThreshold)
+            {
+                animator.SetTrigger("PlayerRedHurt");
+            }
+
             if (collisionCount >= deathCollisionThreshold)
             {
                 animator.SetTrigger("PlayerRedDead");

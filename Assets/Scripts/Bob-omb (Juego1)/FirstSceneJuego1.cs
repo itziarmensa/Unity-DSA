@@ -11,7 +11,6 @@ public class FirstSceneJuego1 : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("empieza el script");
         instance = this;
     }
 
@@ -19,14 +18,11 @@ public class FirstSceneJuego1 : MonoBehaviour
     private void Start()
     {
         StartCoroutine(ChangeScene());
-        //SceneManager.LoadScene("PrincipalSceneJuego1");
     }
 
     IEnumerator ChangeScene()
     {
-        Debug.Log("empieza a contar");
         yield return new WaitForSeconds(5);
-        Debug.Log("cambio");
         SceneManager.LoadScene("PrincipalSceneJuego1");
     }
 
