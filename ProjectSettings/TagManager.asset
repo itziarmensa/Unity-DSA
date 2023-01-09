@@ -7,6 +7,14 @@ TagManager:
   - Linea
   - Juego1
   - BolaFuego
+  - BombaAzul
+  - CajaRoja
+  - BombaRoja
+  - CajaAzul
+  - Juego2
+  - Juego3
+  - Juego4
+  - Juego5
   layers:
   - Default
   - TransparentFX

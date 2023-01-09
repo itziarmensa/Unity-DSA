@@ -14,18 +14,12 @@ public class PlayerRed : MonoBehaviour
     public GameObject lineaBlanca;
     public GameObject nivelJuego1;
 
-    public GameManagerJuego1 gameManagerJuego1;
-
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
 
-
-        Debug.Log("Win = " + gameManagerJuego1.win);
-        Debug.Log("Game1 = " + gameManagerJuego1.game1);
-
-        if (!gameManagerJuego1.game1)
+        /*if (!gameManagerJuego1.game1)
         {
             Camera camera = Camera.main;
 
@@ -46,9 +40,21 @@ public class PlayerRed : MonoBehaviour
             float x1 = position1.x;
             float y1 = position1.y;
             transform.position = new Vector2(x1, y1);
-        }
+        }*/
 
-        
+        Camera camera = Camera.main;
+
+        float cameraHalfWidth = camera.orthographicSize * camera.aspect;
+        float cameraHalfHeight = camera.orthographicSize;
+
+        float x = camera.transform.position.x - cameraHalfWidth;
+        float y = camera.transform.position.y;
+        //float positionY = y + 0.8f;
+
+        // Asignamos la posición inicial al personaje
+        transform.position = new Vector2(x, y);
+
+
 
         colision = false;
     }

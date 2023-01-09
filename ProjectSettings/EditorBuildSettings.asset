@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bob-omb (Juego1)/WinSceneJuego1.unity
     guid: 2c0f32300e748e443a3c9db6f265b57e
+  - enabled: 1
+    path: Assets/Scenes/Game1Lose.unity
+    guid: 892a9a27def26eb458146dfcb35b5089
+  - enabled: 1
+    path: Assets/Scenes/Sort_or_Splode/EscenaJuego2.unity
+    guid: 26e4c33dd1f60eb4ca3de2eeab207798
+  - enabled: 1
+    path: Assets/Scenes/Game1Win.unity
+    guid: 63634aa7b48a92a4893bc0d42995a847
   m_configObjects: {}
