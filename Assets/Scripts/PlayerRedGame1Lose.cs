@@ -17,7 +17,8 @@ public class PlayerRedGame1Lose : MonoBehaviour
         Vector3 position1 = nivelJuego1.transform.position;
         float x1 = position1.x;
         float y1 = position1.y;
-        transform.position = new Vector2(x1, y1);
+        float positionY1 = y1 + 0.8f;
+        transform.position = new Vector2(x1, positionY1);
 
     }
 
