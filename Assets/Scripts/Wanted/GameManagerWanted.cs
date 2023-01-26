@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagerWanted : MonoBehaviour
 {
@@ -59,7 +60,7 @@ public class GameManagerWanted : MonoBehaviour
 
         if (level > 3)
         {
-            Succes();
+            StartCoroutine(SuccesWanted());
         }
 
         if (id != 0)
@@ -127,11 +128,11 @@ public class GameManagerWanted : MonoBehaviour
     {
         if (myTimer.getTimer() == 0)
         {
-            GameOver();
+            StartCoroutine(GameOverWanted());
         }
         else if (score == 40)
         {
-            Succes();
+            StartCoroutine(SuccesWanted());
         }
     }
 
@@ -157,11 +158,11 @@ public class GameManagerWanted : MonoBehaviour
     {
         if (score == 40)  // Hemos superado todos los niveles
         {
-            Succes();
+            StartCoroutine(SuccesWanted());
         }
         else if (score < 40 && myTimer.getTimer() == 0)   //Hemos perdido
         {
-            GameOver();
+            StartCoroutine(GameOverWanted());
         }
         else
         {
@@ -179,13 +180,24 @@ public class GameManagerWanted : MonoBehaviour
         }
     }
 
-    public void Succes()
+    public IEnumerator SuccesWanted()
     {
-        SuccesBackground.transform.position = new Vector3(0, 0, 0);
+        yield return new WaitForSeconds(0.9f);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SuccesWanted");
+        
+        /*while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }*/
     }
 
-    public void GameOver()
+    public IEnumerator GameOverWanted()
     {
-        GameOverBackGround.transform.position = new Vector3(0, 0, 0);
+        yield return new WaitForSeconds(0.9f);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("GameOverWanted");
+        /*while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }*/
     }
 }
