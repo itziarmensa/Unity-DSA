@@ -29,4 +29,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game1Win.unity
     guid: 63634aa7b48a92a4893bc0d42995a847
+  - enabled: 1
+    path: Assets/Scenes/Wanted/FirstSceneWanted.unity
+    guid: 12e2ca37363ed974a83e9cc1442b8345
+  - enabled: 1
+    path: Assets/Scenes/Wanted/GameOverWanted.unity
+    guid: f3ac045d489252247a840a1e74eea666
+  - enabled: 1
+    path: Assets/Scenes/Wanted/SuccesWanted.unity
+    guid: 2b9ccbe1785931a42adc5cbeed36a1ae
+  - enabled: 1
+    path: Assets/Scenes/Wanted/WantedPrincipal.unity
+    guid: 5edd3720a09e4ee40bd3f1da8d43158a
+  - enabled: 1
+    path: Assets/Scenes/Game3Lose.unity
+    guid: e152c391dc4f5d04185df71334d924d8
+  - enabled: 1
+    path: Assets/Scenes/Game3Win.unity
+    guid: 71f8ffd3bd3805442900e09b4a89c764
   m_configObjects: {}
