@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -118,7 +119,7 @@ public class GameManager : MonoBehaviour
     // Método que aumenta la puntuación actual
     public void AumentarPuntuacion(int amount)
     {
-        if (puntuacion == 100)
+        if (puntuacion == 49)
         {
             Win();
         }
@@ -144,28 +145,31 @@ public class GameManager : MonoBehaviour
         textoGameOver.text = "Game Over";
         
         // Detenemos el juego
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         
         foreach (GameObject bomba in bombas)
         {
             Destroy(bomba);
         }
         
-        StopAllCoroutines();
-        playing = false;
+        //StopAllCoroutines();
+        //playing = false;
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("GameOverSortorSplode");
     }
     public void Win()
     {
         textoGameOver.text = "Victory!";
         // Detenemos el juego
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         foreach (GameObject bomba in bombas)
         {
             Destroy(bomba);
         }
 
-        StopAllCoroutines();
-        playing = false;
+        //StopAllCoroutines();
+        //playing = false;
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("WinSortOrSplode");
 
     }
     public int ContadorBombas()

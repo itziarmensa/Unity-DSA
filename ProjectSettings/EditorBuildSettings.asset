@@ -47,4 +47,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game3Win.unity
     guid: 71f8ffd3bd3805442900e09b4a89c764
+  - enabled: 1
+    path: Assets/Scenes/Game2Lose.unity
+    guid: aaae6a94a1daa494d9e5d1724242bab6
+  - enabled: 1
+    path: Assets/Scenes/Game2Win.unity
+    guid: c53cb8db8ed7c2b458c3c51127dab11b
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Sort_or_Splode/GameOverSortorSplode.unity
+    guid: e3a799ae9854ea54185182744b54e26d
+  - enabled: 1
+    path: Assets/Scenes/Sort_or_Splode/WinSortOrSplode.unity
+    guid: 045fe9ee95978584382d9796d782baa7
+  - enabled: 1
+    path: Assets/Scenes/Sort_or_Splode/FirstSceneJuego2.unity
+    guid: 8be6e40439be426449cad24401ed7222
   m_configObjects: {}

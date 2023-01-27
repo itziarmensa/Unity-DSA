@@ -2,30 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class PlayerRedGame1Win : MonoBehaviour
+public class PlayerRed2Win : MonoBehaviour
 {
     public float speed = 5.0f;
     private Rigidbody2D rb;
 
     private Animator animator;
-    public GameObject nivelJuego1;
+    public GameObject nivelJuego2;
     private bool colision;
 
     public GameObject lineaBlanca;
-
-
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
 
-        Vector3 position1 = nivelJuego1.transform.position;
+        Vector3 position1 = nivelJuego2.transform.position;
         float x1 = position1.x;
         float y1 = position1.y;
         float positionY1 = y1 + 0.8f;
         transform.position = new Vector2(x1, positionY1);
-
     }
 
     // Update is called once per frame
@@ -41,23 +37,19 @@ public class PlayerRedGame1Win : MonoBehaviour
         {
             animator.ResetTrigger("PlayerRedRun");
         }
-
     }
-
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Juego2"))
+        if (collision.gameObject.CompareTag("Juego3"))
         {
             colision = true;
             animator.SetTrigger("PlayerRedJump");
             yield return new WaitForSeconds(1);
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("FirstSceneJuego2");
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("FirstSceneWanted");
             while (!asyncLoad.isDone)
             {
                 yield return null;
             }
         }
     }
-
-
 }
