@@ -182,22 +182,22 @@ public class GameManagerWanted : MonoBehaviour
 
     public IEnumerator SuccesWanted()
     {
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.5f);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SuccesWanted");
         
-        /*while (!asyncLoad.isDone)
+        while (!asyncLoad.isDone)
         {
             yield return null;
-        }*/
+        }
     }
 
     public IEnumerator GameOverWanted()
     {
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.5f);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("GameOverWanted");
-        /*while (!asyncLoad.isDone)
+        while (!asyncLoad.isDone)
         {
             yield return null;
-        }*/
+        }
     }
 }
