@@ -65,4 +65,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sort_or_Splode/FirstSceneJuego2.unity
     guid: 8be6e40439be426449cad24401ed7222
+  - enabled: 1
+    path: Assets/Scenes/Game4Lose.unity
+    guid: 7af46fe48ea27e448993acb969c11f0e
+  - enabled: 1
+    path: Assets/Scenes/Game4Win.unity
+    guid: 70658e7f9d4bdb44aabe9dc9799060d3
+  - enabled: 1
+    path: Assets/Scenes/Empareja_Despeja/SceneEmpareja.unity
+    guid: a065124eab126ff4d927c1ca9329a6e4
+  - enabled: 1
+    path: Assets/Scenes/Empareja_Despeja/GameOverSceneJuego4.unity
+    guid: 3d876640709629248ae72da565d5b632
+  - enabled: 1
+    path: Assets/Scenes/Empareja_Despeja/WinSceneJuego4.unity
+    guid: 355cfe320a2c1b24ba53c101387e2bc2
   m_configObjects: {}

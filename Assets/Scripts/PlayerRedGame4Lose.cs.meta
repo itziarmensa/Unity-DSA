@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 9c47c70a24f37114db4b110fa537dffe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - nivelJuego4: {fileID: 5602537071417268786, guid: 82376055e608da34593ad79cedcf0499, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
