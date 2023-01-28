@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5753514739591600090}
   - component: {fileID: 5753514739591600091}
   - component: {fileID: 5753514739591600088}
+  - component: {fileID: 1301021193504477102}
   m_Layer: 6
   m_Name: AdventureBoy
   m_TagString: Player
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -154,3 +155,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1301021193504477102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5753514739591600089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 950c9b4f6c7c3304f8c816558b0199a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

@@ -3,21 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerRed : MonoBehaviour
+public class Player : MonoBehaviour
 {
 
-    public float speed = 5.0f;
+    /*public float speed = 5.0f;
     private Rigidbody2D rb;
     private Animator animator;
-    private bool colision;
+    private bool colision;*/
 
     public GameObject lineaBlanca;
     public GameObject nivelJuego1;
 
+    public GameObject playerRed;
+    bool Red = false;
+
+    public GameObject adventureBoy;
+    bool adBoy = false;
+
+    public GameObject adventureGirl;
+    bool adGirl = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();      
+        //animator = GetComponent<Animator>();      
 
         Camera camera = Camera.main;
 
@@ -28,16 +38,30 @@ public class PlayerRed : MonoBehaviour
         float y = camera.transform.position.y;
         float positionY = y + 0.8f;
 
-        // Asignamos la posición inicial al personaje
-        transform.position = new Vector2(x, positionY);
+        Vector3 playerPosition = new Vector3(x, positionY, 0);
+
+        adGirl = true;
+
+        if(Red == true)
+        {
+            Instantiate(playerRed, playerPosition, Quaternion.identity);
+        }
+
+        if(adBoy == true)
+        {
+            Instantiate(adventureBoy, playerPosition, Quaternion.identity);
+        }
+
+        if (adGirl == true)
+        {
+            Instantiate(adventureGirl, playerPosition, Quaternion.identity);
+        }
 
 
-
-        colision = false;
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
 
         if (!colision)
@@ -53,22 +77,22 @@ public class PlayerRed : MonoBehaviour
         
 
 
-    }
+    }*/
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Juego1"))
         {
             colision = true;
-            /*animator.SetTrigger("PlayerRedJump");
+            animator.SetTrigger("PlayerRedJump");
             yield return new WaitForSeconds(1);
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("FirstSceneJuego1");
             while (!asyncLoad.isDone)
             {
                 yield return null;
-            }*/
+            }
         }
-    }
+    }*/
 
 
 }
