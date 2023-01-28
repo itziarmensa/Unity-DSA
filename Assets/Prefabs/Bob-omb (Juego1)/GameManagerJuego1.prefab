@@ -64,3 +64,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDelay: 1
+  tiempo: {fileID: 4311888612252039854, guid: 8d163c301e8de4e4f9c0759b557b6e50, type: 3}
