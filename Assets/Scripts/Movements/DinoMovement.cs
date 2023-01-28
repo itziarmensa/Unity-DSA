@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerAdventureBoyMovement : MonoBehaviour
+public class DinoMovement : MonoBehaviour
 {
     public float speed = 5.0f;
     public Button jugarBoton;
@@ -28,15 +28,15 @@ public class PlayerAdventureBoyMovement : MonoBehaviour
         if (!colision)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
-            animator.SetTrigger("AdventureBoyRun");
+            animator.SetTrigger("DinoRun");
         }
         else
         {
-            animator.ResetTrigger("AdventureBoyRun");
+            animator.ResetTrigger("DinoRun");
         }
         if (playRedJump)
         {
-            animator.SetTrigger("AdventureBoyJump");
+            animator.SetTrigger("DinoJump");
             playRedJump = false;
         }
     }

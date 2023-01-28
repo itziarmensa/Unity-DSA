@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerAdventureBoyMovement : MonoBehaviour
+public class CatMovement : MonoBehaviour
 {
     public float speed = 5.0f;
     public Button jugarBoton;
@@ -17,7 +17,7 @@ public class PlayerAdventureBoyMovement : MonoBehaviour
     {
         colision = false;
         animator = GetComponent<Animator>();
-
+        
         jugarBoton = GameObject.Find("Canvas/BotonJugar1").GetComponent<Button>();
         jugarBoton.onClick.AddListener(OnButtonClick);
     }
@@ -28,15 +28,15 @@ public class PlayerAdventureBoyMovement : MonoBehaviour
         if (!colision)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
-            animator.SetTrigger("AdventureBoyRun");
+            animator.SetTrigger("CatRun");
         }
         else
         {
-            animator.ResetTrigger("AdventureBoyRun");
+            animator.ResetTrigger("CatRun");
         }
         if (playRedJump)
         {
-            animator.SetTrigger("AdventureBoyJump");
+            animator.SetTrigger("CatJump");
             playRedJump = false;
         }
     }

@@ -8,21 +8,17 @@ public class JugarJuego1 : MonoBehaviour
 {
 
     public Button jugar;
-    public GameObject player;
-    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         jugar.GetComponentInChildren<Text>().text = "JUGAR";
-        animator = player.GetComponent<Animator>();
         jugar.onClick.AddListener(TaskOnClick);
         
     }
 
     void TaskOnClick()
     {
-        animator.SetTrigger("PlayerRedJump");
         StartCoroutine(LoadScene());
     }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerAdventureBoyMovement : MonoBehaviour
+public class ZombieMovement : MonoBehaviour
 {
     public float speed = 5.0f;
     public Button jugarBoton;
@@ -28,15 +28,15 @@ public class PlayerAdventureBoyMovement : MonoBehaviour
         if (!colision)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
-            animator.SetTrigger("AdventureBoyRun");
+            animator.SetTrigger("ZombieWalk");
         }
         else
         {
-            animator.ResetTrigger("AdventureBoyRun");
+            animator.ResetTrigger("ZombieWalk");
         }
         if (playRedJump)
         {
-            animator.SetTrigger("AdventureBoyJump");
+            //animator.SetTrigger("ZombieJump");
             playRedJump = false;
         }
     }
