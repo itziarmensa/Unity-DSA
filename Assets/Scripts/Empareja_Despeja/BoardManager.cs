@@ -27,7 +27,6 @@ public class BoardManager : MonoBehaviour
     private int remainingCards5;
     private TMP_Text card6Text;
     private int remainingCards6;
-    private GameObject endGame;
     private List<Sprite> displayedCards = new List<Sprite>();
     private Transform boardHolder;
     private List<Vector3> gridPositions = new List<Vector3>();
@@ -79,8 +78,6 @@ public class BoardManager : MonoBehaviour
                 instance.transform.SetParent(boardHolder);
             }
         }
-        endGame = GameObject.Find("EndGame");
-        endGame.SetActive(false);
         totalCardsText = GameObject.Find("TotalCards").GetComponent<TextMeshProUGUI>();
         totalCardsText.text = "Total cards: " + cardsCount;
         remainingCardsText = GameObject.Find("RemainingCards").GetComponent<TextMeshProUGUI>();
@@ -219,14 +216,10 @@ public class BoardManager : MonoBehaviour
         remainingCardsText.text = "Remaining cards: " + displayedCards.Count;
         if (displayedCards.Count == 0)
         {
-            endGame.SetActive(true);
             StartCoroutine(GameWon());
         }
         else if (!Solution())
         {
-            TMP_Text endGameText = endGame.GetComponent<TextMeshProUGUI>();
-            endGameText.text = "You have lost the game";
-            endGame.SetActive(true);
             StartCoroutine(GameOver());
         }
     }

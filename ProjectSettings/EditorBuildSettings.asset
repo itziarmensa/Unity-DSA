@@ -83,4 +83,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Empareja_Despeja/FirstSceneJuego4.unity
     guid: 1c2596071bf498c4dabb07cef9d2488a
+  - enabled: 1
+    path: Assets/Scenes/FinalMapa/EscenaFinalMapa.unity
+    guid: fd7e724ea3be7df43a99e9bb67f3e0c2
   m_configObjects: {}

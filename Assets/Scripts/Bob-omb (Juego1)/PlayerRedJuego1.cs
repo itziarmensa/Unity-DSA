@@ -45,18 +45,66 @@ public class PlayerRedJuego1 : MonoBehaviour
     void Update()
     {
 
+        /*float horizontalMovement = Input.GetAxis("Horizontal");
+        float verticalMovement = Input.GetAxis("Vertical");*/
 
-        float horizontalMovement = Input.GetAxis("Horizontal");
-        float verticalMovement = Input.GetAxis("Vertical");
+        int horizontalMovement = 0;      //Used to store the horizontal move direction.
+        int verticalMovement = 0;        //Used to store the vertical move direction.
 
-        Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0);
+#if UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x + movement.x * speed * Time.deltaTime, minX, maxX),
-                                        Mathf.Clamp(transform.position.y + movement.y * speed * Time.deltaTime, minY, maxY),
-                                        transform.position.z);
+        if (Input.touchCount > 0)
+        {
+            Touch myTouch = Input.touches[0];
+
+            if (myTouch.phase == TouchPhase.Began)
+            {
+                touchOrigin = myTouch.position;
+            }
+
+            else if (myTouch.phase == TouchPhase.Ended && touchOrigin.x >= 0)
+            {
+                Vector2 touchEnd = myTouch.position;
+                float x = touchEnd.x - touchOrigin.x;
+                float y = touchEnd.y - touchOrigin.y;
+                touchOrigin.x = -1;
+                if (Mathf.Abs(x) > Mathf.Abs(y))
+                    horizontalMovement = x > 0 ? 1 : -1;
+                else
+                    verticalMovement = y > 0 ? 1 : -1;
+            }
+
+            
+        }
+
+
+
+#elif UNITY_STANDALONE || UNITY_WEBPLAYER || UNITY_EDITOR
+
+        //Get input from the input manager, round it to an integer and store in horizontal to set x axis move direction
+        horizontalMovement = (int) (Input.GetAxisRaw ("Horizontal"));
+
+        //Get input from the input manager, round it to an integer and store in vertical to set y axis move direction
+        verticalMovement = (int) (Input.GetAxisRaw ("Vertical"));
+
+        //Check if moving horizontally, if so set vertical to zero.
+        if(horizontalMovement != 0)
+        {
+            verticalMovement = 0;
+        }
+
+               
+
+#endif
+
 
         if (horizontalMovement != 0 || verticalMovement != 0)
         {
+            Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0);
+
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x + movement.x * speed * Time.deltaTime * 10, minX, maxX),
+                                       Mathf.Clamp(transform.position.y + movement.y * speed * Time.deltaTime * 10, minY, maxY),
+                                       transform.position.z);
             animator.SetTrigger("PlayerRedRun");
         }
 
