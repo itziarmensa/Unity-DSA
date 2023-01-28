@@ -80,4 +80,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Empareja_Despeja/WinSceneJuego4.unity
     guid: 355cfe320a2c1b24ba53c101387e2bc2
+  - enabled: 1
+    path: Assets/Scenes/Empareja_Despeja/FirstSceneJuego4.unity
+    guid: 1c2596071bf498c4dabb07cef9d2488a
   m_configObjects: {}

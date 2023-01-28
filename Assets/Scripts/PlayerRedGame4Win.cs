@@ -51,11 +51,13 @@ public class PlayerRedGame4Win : MonoBehaviour
             colision = true;
             animator.SetTrigger("PlayerRedJump");
             yield return new WaitForSeconds(1);
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("EscenaJuego5");
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("EscenaFinalMapa");
             while (!asyncLoad.isDone)
             {
                 yield return null;
             }
+            StopAllCoroutines();
+            
         }
     }
 }

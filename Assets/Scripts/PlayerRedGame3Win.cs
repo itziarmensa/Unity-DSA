@@ -44,18 +44,18 @@ public class PlayerRedGame3Win : MonoBehaviour
 
     }
 
-    private IEnumerator OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Juego4"))
         {
             colision = true;
-            animator.SetTrigger("PlayerRedJump");
+            /*animator.SetTrigger("PlayerRedJump");
             yield return new WaitForSeconds(1);
-            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("SceneEmpareja");
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("FirstSceneJuego4");
             while (!asyncLoad.isDone)
             {
                 yield return null;
-            }
+            }*/
         }
     }
 }

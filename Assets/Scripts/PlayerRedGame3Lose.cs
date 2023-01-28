@@ -22,7 +22,7 @@ public class PlayerRedGame3Lose : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         StartCoroutine(VolverJuego3());
 
@@ -38,5 +38,5 @@ public class PlayerRedGame3Lose : MonoBehaviour
         {
             yield return null;
         }
-    }
+    }*/
 }
