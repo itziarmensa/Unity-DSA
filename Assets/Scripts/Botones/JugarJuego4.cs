@@ -8,21 +8,21 @@ using TMPro;
 public class JugarJuego4 : MonoBehaviour
 {
     public Button jugar;
-    public GameObject player;
-    private Animator animator;
+    //public GameObject player;
+    //private Animator animator;
     private TextMeshProUGUI textReintentar;
     // Start is called before the first frame update
     void Start()
     {
         textReintentar = jugar.GetComponentInChildren<TextMeshProUGUI>();
         textReintentar.text = "JUGAR";
-        animator = player.GetComponent<Animator>();
+        //animator = player.GetComponent<Animator>();
         jugar.onClick.AddListener(TaskOnClick);
     }
 
     void TaskOnClick()
     {
-        animator.SetTrigger("PlayerRedJump");
+        //animator.SetTrigger("PlayerRedJump");
         StartCoroutine(LoadScene());
     }
 

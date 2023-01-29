@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+public class Lose : MonoBehaviour
 {
 
-    public static Player instance;
+    public static Lose instance;
 
 
     private void Awake()
@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     private bool colision;*/
 
     public GameObject lineaBlanca;
-    public GameObject nivelJuego1;
+    public GameObject nivelJuego;
 
     public GameObject playerRed;
     bool Red = false;
@@ -78,98 +78,91 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //animator = GetComponent<Animator>();      
+        //animator = GetComponent<Animator>();
 
-        Camera camera = Camera.main;
-
-        float cameraHalfWidth = camera.orthographicSize * camera.aspect;
-        float cameraHalfHeight = camera.orthographicSize;
-
-        float x = camera.transform.position.x - cameraHalfWidth;
-        float y = camera.transform.position.y;
-        float positionY = y + 0.8f;
-
-        Vector3 playerPosition = new Vector3(x, positionY, 0);
+        Vector3 position1 = nivelJuego.transform.position;
+        float x1 = position1.x;
+        float y1 = position1.y;
+        float positionY1 = y1 + 0.8f;
+        transform.position = new Vector2(x1, positionY1);
 
         Zombie = true;
-        
 
-        if(Red == true)
+        if (Red == true)
         {
-            Instantiate(playerRed, playerPosition, Quaternion.identity);
+            Instantiate(playerRed, transform.position, Quaternion.identity);
         }
 
-        if(adBoy == true)
+        if (adBoy == true)
         {
-            Instantiate(adventureBoy, playerPosition, Quaternion.identity);
+            Instantiate(adventureBoy, transform.position, Quaternion.identity);
         }
 
         if (adGirl == true)
         {
-            Instantiate(adventureGirl, playerPosition, Quaternion.identity);
+            Instantiate(adventureGirl, transform.position, Quaternion.identity);
         }
 
         if (Cat == true)
         {
-            Instantiate(playerCat, playerPosition, Quaternion.identity);
+            Instantiate(playerCat, transform.position, Quaternion.identity);
         }
 
         if (CuteGirl == true)
         {
-            Instantiate(playerCuteGirl, playerPosition, Quaternion.identity);
+            Instantiate(playerCuteGirl, transform.position, Quaternion.identity);
         }
 
         if (Dino == true)
         {
-            Instantiate(playerDino, playerPosition, Quaternion.identity);
+            Instantiate(playerDino, transform.position, Quaternion.identity);
         }
 
         if (Dog == true)
         {
-            Instantiate(playerDog, playerPosition, Quaternion.identity);
+            Instantiate(playerDog, transform.position, Quaternion.identity);
         }
 
         if (Jack == true)
         {
-            Instantiate(playerJack, playerPosition, Quaternion.identity);
+            Instantiate(playerJack, transform.position, Quaternion.identity);
         }
 
         if (NinjaBoy == true)
         {
-            Instantiate(playerNinjaBoy, playerPosition, Quaternion.identity);
+            Instantiate(playerNinjaBoy, transform.position, Quaternion.identity);
         }
 
         if (NinjaGirl == true)
         {
-            Instantiate(playerNinjaGirl, playerPosition, Quaternion.identity);
+            Instantiate(playerNinjaGirl, transform.position, Quaternion.identity);
         }
 
         if (Robot == true)
         {
-            Instantiate(playerRobotl, playerPosition, Quaternion.identity);
+            Instantiate(playerRobotl, transform.position, Quaternion.identity);
         }
 
         if (Santa == true)
         {
-            Instantiate(playerSanta, playerPosition, Quaternion.identity);
+            Instantiate(playerSanta, transform.position, Quaternion.identity);
         }
 
         if (Boy == true)
         {
-            Instantiate(playerBoy, playerPosition, Quaternion.identity);
+            Instantiate(playerBoy, transform.position, Quaternion.identity);
         }
 
 
         if (Knight == true)
         {
-            Instantiate(playerKnight, playerPosition, Quaternion.identity);
+            Instantiate(playerKnight, transform.position, Quaternion.identity);
         }
 
         if (Zombie == true)
         {
-            Instantiate(playerZombie, playerPosition, Quaternion.identity);
+            Instantiate(playerZombie, transform.position, Quaternion.identity);
         }
-
     }
 
 

@@ -9,8 +9,8 @@ public class JugarJuego2 : MonoBehaviour
 {
 
     public Button jugar;
-    public GameObject player;
-    private Animator animator;
+    //public GameObject player;
+    //private Animator animator;
     private TextMeshProUGUI textReintentar;
 
     // Start is called before the first frame update
@@ -18,14 +18,14 @@ public class JugarJuego2 : MonoBehaviour
     {
         textReintentar = jugar.GetComponentInChildren<TextMeshProUGUI>();
         textReintentar.text = "JUGAR";
-        animator = player.GetComponent<Animator>();
+        //animator = player.GetComponent<Animator>();
         jugar.onClick.AddListener(TaskOnClick);
 
     }
 
     void TaskOnClick()
     {
-        animator.SetTrigger("PlayerRedJump");
+        //animator.SetTrigger("PlayerRedJump");
         StartCoroutine(LoadScene());
     }
 

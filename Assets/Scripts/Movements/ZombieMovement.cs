@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ZombieMovement : MonoBehaviour
 {
     public float speed = 5.0f;
-    public Button jugarBoton;
+    //public Button jugarBoton;
     private Rigidbody2D rb;
     private Animator animator;
     private bool colision;
@@ -18,8 +19,8 @@ public class ZombieMovement : MonoBehaviour
         colision = false;
         animator = GetComponent<Animator>();
 
-        jugarBoton = GameObject.Find("Canvas/BotonJugar1").GetComponent<Button>();
-        jugarBoton.onClick.AddListener(OnButtonClick);
+        //jugarBoton = GameObject.Find("Canvas/BotonJugar1").GetComponent<Button>();
+        //jugarBoton.onClick.AddListener(OnButtonClick);
     }
 
     // Update is called once per frame
@@ -52,5 +53,22 @@ public class ZombieMovement : MonoBehaviour
         {
             colision = true;
         }
+        if (collision.gameObject.CompareTag("Juego2"))
+        {
+            colision = true;
+        }
+        if (collision.gameObject.CompareTag("Juego3"))
+        {
+            colision = true;
+        }
+        if (collision.gameObject.CompareTag("Juego4"))
+        {
+            colision = true;
+        }
+        if (collision.gameObject.CompareTag("Juego5"))
+        {
+            colision = true;
+        }
+        
     }
 }

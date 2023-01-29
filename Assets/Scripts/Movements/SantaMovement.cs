@@ -52,5 +52,21 @@ public class SantaMovement : MonoBehaviour
         {
             colision = true;
         }
+        if (collision.gameObject.CompareTag("Juego2"))
+        {
+            colision = true;
+        }
+        if (collision.gameObject.CompareTag("Juego3"))
+        {
+            colision = true;
+        }
+        if (collision.gameObject.CompareTag("Juego4"))
+        {
+            colision = true;
+        }
+        if (collision.gameObject.CompareTag("Juego5"))
+        {
+            colision = true;
+        }
     }
 }

@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8142365948027422370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6024792135914985218}
+  - component: {fileID: 7585890349061208264}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6024792135914985218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8142365948027422370}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 339.50967, y: 140.11827, z: -10.690418}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7585890349061208264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8142365948027422370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc91f84f5d7d36048a3f4f6cb19ffc3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lineaBlanca: {fileID: 6623971814613565462, guid: ee82431accb16da48b533d5357a0ed63, type: 3}
+  nivelJuego1: {fileID: 588129675654036486, guid: f185751843e378240b87195e92ca96d0, type: 3}
+  playerRed: {fileID: 2262567928287798689, guid: ef589ae4ea39d194287d9f2e8318b563, type: 3}
+  adventureBoy: {fileID: 5753514739591600089, guid: 06d404fe70c1bc14cbca1baf8e476383, type: 3}
+  adventureGirl: {fileID: 8654350395601186589, guid: bc5792befc6f5444d9ca2a49fec6549f, type: 3}
+  playerCat: {fileID: 1978494680744339684, guid: c94adea8f88f4fc47944ed40be26510f, type: 3}
+  playerCuteGirl: {fileID: 8348427180453783420, guid: a69c78925073ea54a8ecd22e58b52916, type: 3}
+  playerDino: {fileID: 9206090418591244581, guid: 0d2cc7cd93994734b9b3bac4defb9d29, type: 3}
+  playerDog: {fileID: 3544290965557513514, guid: 76cc012d112cd064c969162016363de0, type: 3}
+  playerJack: {fileID: 6957022753819525870, guid: 11afd12fc2ba47842a9e2eccc4ad9019, type: 3}
+  playerNinjaBoy: {fileID: 1403534851369440287, guid: 8a4409d068bb08145beb1b7010ef32a3, type: 3}
+  playerNinjaGirl: {fileID: 1145190204873176040, guid: 0e3e56dc2b21280469ec01e9270d8376, type: 3}
+  playerRobotl: {fileID: 6410042375394853106, guid: 5d8ed9b953fa0ba4a93747258d341822, type: 3}
+  playerSanta: {fileID: 4583379723220943700, guid: bc56054c5edd6c14c99bb985f4d0eb13, type: 3}
+  playerBoy: {fileID: 6621437068589043047, guid: e6232ab80faa48d4b80ec4d956cb1d62, type: 3}
+  playerKnight: {fileID: 3340120831358527555, guid: 2bff3efc4a1c8d44ead0555c63a93029, type: 3}
+  playerZombie: {fileID: 2222684571849636406, guid: 060bbfee58d415245b46f48ef9d2dd1f, type: 3}

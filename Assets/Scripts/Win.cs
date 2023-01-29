@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+public class Win : MonoBehaviour
 {
 
-    public static Player instance;
+    public static Win instance;
 
 
     private void Awake()
@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     private bool colision;*/
 
     public GameObject lineaBlanca;
-    public GameObject nivelJuego1;
+    public GameObject nivelJuego;
 
     public GameObject playerRed;
     bool Red = false;
@@ -78,28 +78,25 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //animator = GetComponent<Animator>();      
+        //animator = GetComponent<Animator>(); 
 
-        Camera camera = Camera.main;
+        Vector3 position1 = nivelJuego.transform.position;
+        float x1 = position1.x;
+        float y1 = position1.y;
+        float positionY1 = y1 + 0.8f;
+        //transform.position = new Vector2(x1, positionY1);
 
-        float cameraHalfWidth = camera.orthographicSize * camera.aspect;
-        float cameraHalfHeight = camera.orthographicSize;
-
-        float x = camera.transform.position.x - cameraHalfWidth;
-        float y = camera.transform.position.y;
-        float positionY = y + 0.8f;
-
-        Vector3 playerPosition = new Vector3(x, positionY, 0);
+        Vector3 playerPosition = new Vector3(x1, positionY1, 0);
 
         Zombie = true;
-        
 
-        if(Red == true)
+
+        if (Red == true)
         {
             Instantiate(playerRed, playerPosition, Quaternion.identity);
         }
 
-        if(adBoy == true)
+        if (adBoy == true)
         {
             Instantiate(adventureBoy, playerPosition, Quaternion.identity);
         }

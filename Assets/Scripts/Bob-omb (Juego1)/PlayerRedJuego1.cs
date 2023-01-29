@@ -73,7 +73,10 @@ public class PlayerRedJuego1 : MonoBehaviour
                 else
                     verticalMovement = y > 0 ? 1 : -1;
             }
-
+            Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x + movement.x * speed * Time.deltaTime * 10, minX, maxX),
+                                       Mathf.Clamp(transform.position.y + movement.y * speed * Time.deltaTime * 10, minY, maxY),
+                                       transform.position.z);
             
         }
 
@@ -92,7 +95,10 @@ public class PlayerRedJuego1 : MonoBehaviour
         {
             verticalMovement = 0;
         }
-
+        Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x + movement.x * speed * Time.deltaTime, minX, maxX),
+                                       Mathf.Clamp(transform.position.y + movement.y * speed * Time.deltaTime, minY, maxY),
+                                       transform.position.z);
                
 
 #endif
@@ -100,11 +106,6 @@ public class PlayerRedJuego1 : MonoBehaviour
 
         if (horizontalMovement != 0 || verticalMovement != 0)
         {
-            Vector3 movement = new Vector3(horizontalMovement, verticalMovement, 0);
-
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x + movement.x * speed * Time.deltaTime * 10, minX, maxX),
-                                       Mathf.Clamp(transform.position.y + movement.y * speed * Time.deltaTime * 10, minY, maxY),
-                                       transform.position.z);
             animator.SetTrigger("PlayerRedRun");
         }
 

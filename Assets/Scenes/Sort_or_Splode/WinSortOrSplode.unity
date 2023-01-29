@@ -463,7 +463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '!Has ganado!'
+  m_text: "\xA1Has ganado!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d36d3d4fa73e65d45a170e9fe261c1df, type: 2}
   m_sharedMaterial: {fileID: -429741668350150588, guid: d36d3d4fa73e65d45a170e9fe261c1df, type: 2}
