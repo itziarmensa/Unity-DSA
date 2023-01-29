@@ -77,6 +77,7 @@ public class Player : MonoBehaviour
         Vector3 playerPosition = new Vector3(x, positionY, 0);
 
         Zombie = true;
+        
 
         if(Red == true)
         {
