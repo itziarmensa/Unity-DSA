@@ -81,6 +81,13 @@ public class Lose : MonoBehaviour
     public GameObject nivelJuego3;
     public GameObject nivelJuego4;
 
+    private string character;
+
+    public void receivedCharacter(string character)
+    {
+        this.character = character;
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -129,7 +136,71 @@ public class Lose : MonoBehaviour
 
         }
 
-        Knight = true;
+        if (character == "Red Hat Boy")
+        {
+            Red = true;
+        }
+        if (character == "Dog")
+        {
+            Dog = true;
+        }
+        if (character == "The Robot")
+        {
+            Robot = true;
+        }
+        if (character == "Ninja Boy")
+        {
+            NinjaBoy = true;
+        }
+        if (character == "Ninja Girl")
+        {
+            NinjaGirl = true;
+        }
+        if (character == "Adventure Girl")
+        {
+            adGirl = true;
+        }
+        if (character == "Adventure Boy")
+        {
+            adBoy = true;
+        }
+        if (character == "The Boy")
+        {
+            Boy = true;
+        }
+        if (character == "Cute Girl")
+        {
+            CuteGirl = true;
+        }
+        if (character == "Dino")
+        {
+            Dino = true;
+        }
+        if (character == "Santa Claus")
+        {
+            Santa = true;
+        }
+        if (character == "The Zombie")
+        {
+            Zombie = true;
+        }
+        if (character == "Jack O'Lantern")
+        {
+            Jack = true;
+        }
+        if (character == "The Knight")
+        {
+            Knight = true;
+        }
+        if (character == "Cat")
+        {
+            Cat = true;
+        }
+
+
+
+
+
 
         if (Red == true)
         {
