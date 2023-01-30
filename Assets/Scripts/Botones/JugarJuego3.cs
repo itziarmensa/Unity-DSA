@@ -9,7 +9,6 @@ public class JugarJuego3 : MonoBehaviour
 {
     public Button jugar;
     //public GameObject player;
-    private Animator animator;
     private TextMeshProUGUI textReintentar;
     // Start is called before the first frame update
     void Start()

@@ -45,19 +45,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineaBlanca: {fileID: 6623971814613565462, guid: ee82431accb16da48b533d5357a0ed63, type: 3}
+  nivelJuego: {fileID: 588129675654036486, guid: f185751843e378240b87195e92ca96d0, type: 3}
+  playerRed: {fileID: 5914187836966980677, guid: a2097f46b2e7c1945a24b2f976f3a360, type: 3}
+  adventureBoy: {fileID: 947337568151010234, guid: d7b9a945340f25f4fbab0576b74ae527, type: 3}
+  adventureGirl: {fileID: 3391478899317878731, guid: 041dce7352c83a64eabfdf90dd212716, type: 3}
+  playerCat: {fileID: 4993043531131593390, guid: bd05f1f7707ab2d4b9d1339afab7a5ab, type: 3}
+  playerCuteGirl: {fileID: 5793705431229313554, guid: 0bac0e727cb807a4b98996984d2c6d11, type: 3}
+  playerDino: {fileID: 7468331793395689586, guid: 08dcceeaf2d056b4fbf9c35a4c7edb52, type: 3}
+  playerDog: {fileID: 4948016483024430242, guid: ed1bdef411a72274cbbb7c7d51d109df, type: 3}
+  playerJack: {fileID: 8427390172766210866, guid: 9e463065dd61cbd43b485468f4fd95a4, type: 3}
+  playerNinjaBoy: {fileID: 4259793342912666638, guid: 82b38fb126ca45a42b28cb8c8633f6bd, type: 3}
+  playerNinjaGirl: {fileID: 3993520329067222105, guid: 3a45f8e394256ad488f3368b9ddb4ba5, type: 3}
+  playerRobotl: {fileID: 8210754134955159996, guid: 8315c59f9a66c99439f67c4486b50ff6, type: 3}
+  playerSanta: {fileID: 4904043232924932932, guid: b810ccb0ce280344ea231e8402cd2ef0, type: 3}
+  playerBoy: {fileID: 3879430785888357946, guid: a5142ad9d223f744f98ff955fdff625f, type: 3}
+  playerKnight: {fileID: 1813908529639814748, guid: 2a264ca7db6745c4b94255cf8f895700, type: 3}
+  playerZombie: {fileID: 4928330103150356571, guid: 17d520ae5f9ab1c46b0a05be6eb638f3, type: 3}
   nivelJuego1: {fileID: 588129675654036486, guid: f185751843e378240b87195e92ca96d0, type: 3}
-  playerRed: {fileID: 2262567928287798689, guid: ef589ae4ea39d194287d9f2e8318b563, type: 3}
-  adventureBoy: {fileID: 5753514739591600089, guid: 06d404fe70c1bc14cbca1baf8e476383, type: 3}
-  adventureGirl: {fileID: 8654350395601186589, guid: bc5792befc6f5444d9ca2a49fec6549f, type: 3}
-  playerCat: {fileID: 1978494680744339684, guid: c94adea8f88f4fc47944ed40be26510f, type: 3}
-  playerCuteGirl: {fileID: 8348427180453783420, guid: a69c78925073ea54a8ecd22e58b52916, type: 3}
-  playerDino: {fileID: 9206090418591244581, guid: 0d2cc7cd93994734b9b3bac4defb9d29, type: 3}
-  playerDog: {fileID: 3544290965557513514, guid: 76cc012d112cd064c969162016363de0, type: 3}
-  playerJack: {fileID: 6957022753819525870, guid: 11afd12fc2ba47842a9e2eccc4ad9019, type: 3}
-  playerNinjaBoy: {fileID: 1403534851369440287, guid: 8a4409d068bb08145beb1b7010ef32a3, type: 3}
-  playerNinjaGirl: {fileID: 1145190204873176040, guid: 0e3e56dc2b21280469ec01e9270d8376, type: 3}
-  playerRobotl: {fileID: 6410042375394853106, guid: 5d8ed9b953fa0ba4a93747258d341822, type: 3}
-  playerSanta: {fileID: 4583379723220943700, guid: bc56054c5edd6c14c99bb985f4d0eb13, type: 3}
-  playerBoy: {fileID: 6621437068589043047, guid: e6232ab80faa48d4b80ec4d956cb1d62, type: 3}
-  playerKnight: {fileID: 2222684571849636406, guid: 060bbfee58d415245b46f48ef9d2dd1f, type: 3}
-  playerZombie: {fileID: 2222684571849636406, guid: 060bbfee58d415245b46f48ef9d2dd1f, type: 3}
+  nivelJuego2: {fileID: 5768986167889525690, guid: b699d644259a65d4b9a2b0a25ddaa017, type: 3}
+  nivelJuego3: {fileID: 7079731042485567224, guid: 962c1bff9401e0344aac87a05b3fc0be, type: 3}
+  nivelJuego4: {fileID: 5602537071417268786, guid: 82376055e608da34593ad79cedcf0499, type: 3}

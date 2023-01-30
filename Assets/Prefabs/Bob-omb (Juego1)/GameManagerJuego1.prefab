@@ -65,3 +65,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startDelay: 1
   tiempo: {fileID: 4311888612252039854, guid: 8d163c301e8de4e4f9c0759b557b6e50, type: 3}
+  playerRed: {fileID: 5148096515735527436, guid: 32d6738e5f4117148abe0078fd1024a9, type: 3}
+  adventureBoy: {fileID: 4261663002479464705, guid: c94d50bfae1964d409ee25cabdb14ee3, type: 3}
+  adventureGirl: {fileID: 7344880703505612762, guid: dd49aa860a0bda143801bc186d9880db, type: 3}
+  playerCat: {fileID: 146152598383362704, guid: 5b8aaabff80b9fa47b67c14d0e634cd5, type: 3}
+  playerCuteGirl: {fileID: 3486383427749074282, guid: d4b585f690fa26a4d8b24ff7e937512c, type: 3}
+  playerDino: {fileID: 3657805760986942041, guid: 4699634afc6d3ce4f93da52cd5c460eb, type: 3}
+  playerDog: {fileID: 4064968504550106905, guid: 8ae53e097cfc2e949ace9729c4753b5d, type: 3}
+  playerJack: {fileID: 267506426927967961, guid: 2e70fe6329cfbbf429356fb0e36f9830, type: 3}
+  playerNinjaBoy: {fileID: 6298274704893900302, guid: 93b5f73e68726d04c8d4bf1e180c89ae, type: 3}
+  playerNinjaGirl: {fileID: 7235208607370293745, guid: 0945a0cb5dbfdc94a900fd269278044f, type: 3}
+  playerRobotl: {fileID: 7019998326854190879, guid: 8b366112ef57aaf4aad732649d47666c, type: 3}
+  playerSanta: {fileID: 962962138137075777, guid: 7a75f8480154c094da57f568a03dfe52, type: 3}
+  playerBoy: {fileID: 7182160075136776992, guid: a09ce0b3abdad7c4c9a733f8adfaa44e, type: 3}
+  playerKnight: {fileID: 7958208641539903979, guid: 6776473fa4e5abd4aa47140bf7409a66, type: 3}
+  playerZombie: {fileID: 8073718733308145862, guid: a45d4205e51c3644385d488b1da9b978, type: 3}

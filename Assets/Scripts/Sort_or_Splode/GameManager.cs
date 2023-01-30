@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
     // Método que aumenta la puntuación actual
     public void AumentarPuntuacion(int amount)
     {
-        if (puntuacion == 3)
+        if (puntuacion == 49)
         {
             Win();
         }

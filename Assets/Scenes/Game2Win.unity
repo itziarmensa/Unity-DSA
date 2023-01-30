@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c2b51892542a646a19c992bd3478f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 1175648418107967525, guid: 644cff3c8181bf1448a8b901fc4c4f33, type: 3}
+  gameManager: {fileID: 8142365948027422370, guid: 1134005506166f04b823617494573a25, type: 3}
 --- !u!1 &646113568
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 646113571}
   - component: {fileID: 646113570}
   m_Layer: 5
-  m_Name: Reintentar
+  m_Name: BotonJugar3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
