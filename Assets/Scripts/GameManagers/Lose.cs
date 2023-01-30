@@ -81,17 +81,12 @@ public class Lose : MonoBehaviour
     public GameObject nivelJuego3;
     public GameObject nivelJuego4;
 
-    private string character;
-
-    public void receivedCharacter(string character)
-    {
-        this.character = character;
-    }
 
 
     // Start is called before the first frame update
-    void Start()
+    public void receivedCharacter(string character)
     {
+
         //animator = GetComponent<Animator>();
 
         if (SceneManager.GetActiveScene().name == "Game1Lose")

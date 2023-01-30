@@ -64,12 +64,6 @@ public class GameManagerJuego1 : MonoBehaviour
 
     private Vector3 playerPosition;
 
-    private string character;
-
-    public void receivedCharacter(string character)
-    {
-        this.character = character;
-    }
 
     private void Awake()
     {
@@ -86,8 +80,9 @@ public class GameManagerJuego1 : MonoBehaviour
 
 
 
-    private void Start()
+    public void receivedCharacter(string character)
     {
+
         // Iniciamos el contador de tiempo
         StartCoroutine(UpdateTime());
 
